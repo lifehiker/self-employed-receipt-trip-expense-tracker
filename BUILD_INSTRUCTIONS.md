@@ -899,3 +899,14 @@ When the build is complete and verified:
 - [ ] `.env.example` - Template for required environment variables (see below)
 - [ ] `package.json` (or equivalent) - Dependencies and scripts
 
+
+
+Self-heal escalation for deploy failure 2/2: Deploy retry 2/3 failed: Coolify API POST /deploy: 404 {"message":"No resources found."}
+
+You must rebuild this app from a clean slate so it deploys successfully on Coolify.
+Requirements:
+- create a deployable Dockerfile
+- ensure Next.js standalone output works in Docker
+- do not assume any missing directories exist unless you create them
+- verify the app starts correctly in production mode
+- fix anything that would cause Coolify to report 'No resources found'
